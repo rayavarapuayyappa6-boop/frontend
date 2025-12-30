@@ -11,45 +11,47 @@ function showSection(id) {
   });
 
   const target = document.getElementById(id);
-  if (target) {
-    target.classList.add("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  if (!target) return;
 
-    // Show search only on home
-    const searchBox = document.getElementById('globalSearch');
-    if (searchBox) {
-      const show = id === 'home';
-      searchBox.style.display = show ? '' : 'none';
-      searchBox.setAttribute('aria-hidden', show ? 'false' : 'true');
-    }
+  target.classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
-    // Hide login button on login / register / forgot pages, and when logged in
-    const loginBtn = document.getElementById('loginBtn');
-    if (loginBtn) {
-      if (['login', 'register', 'forgot'].includes(id)) {
-        loginBtn.style.display = 'none';
-      } else {
-        loginBtn.style.display = isLoggedIn ? 'none' : 'inline-block';
-      }
-    }
-// Home-only header buttons (Home / Admissions / Contact)
+  // Show search only on home
+  const searchBox = document.getElementById('globalSearch');
+  if (searchBox) {
+    const show = id === 'home';
+    searchBox.style.display = show ? '' : 'none';
+    searchBox.setAttribute('aria-hidden', show ? 'false' : 'true');
+  }
 
-const admissionsBtn = document.getElementById('admissionsBtn');
-const contactBtn = document.getElementById('contactBtn');
-
-const isHomePage = id === 'home';
-
-[homeBtn, admissionsBtn, contactBtn].forEach(btn => {
-  if (!btn) return;
-  btn.style.display = isHomePage ? 'inline-block' : 'none';
-});
-
-    // Re-trigger animations when returning home
-    if (id === "home") {
-      retriggerHomeAnimations();
+  // LOGIN BUTTON (UNCHANGED LOGIC)
+  const loginBtn = document.getElementById('loginBtn');
+  if (loginBtn) {
+    if (['login', 'register', 'forgot'].includes(id)) {
+      loginBtn.style.display = 'none';
+    } else {
+      loginBtn.style.display = isLoggedIn ? 'none' : 'inline-block';
     }
   }
+
+  // ADMISSIONS & CONTACT — SHOW ONLY ON HOME
+  const admissionsBtn = document.getElementById('admissionsBtn');
+  const contactBtn = document.getElementById('contactBtn');
+
+  if (id === 'home') {
+    if (admissionsBtn) admissionsBtn.style.display = 'inline-block';
+    if (contactBtn) contactBtn.style.display = 'inline-block';
+  } else {
+    if (admissionsBtn) admissionsBtn.style.display = 'none';
+    if (contactBtn) contactBtn.style.display = 'none';
+  }
+
+  // Re-trigger animations when returning home
+  if (id === "home") {
+    retriggerHomeAnimations();
+  }
 }
+
 
 /* ==================================================
    PASSWORD SHOW / HIDE
@@ -378,4 +380,9 @@ function retriggerHomeAnimations() {
 }
 function sendOTP() {
   alert("OTP sent successfully (demo)");
+
 }
+// Run Home setup on first page load
+window.addEventListener('load', () => {
+  showSection('home');
+});
