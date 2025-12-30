@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>CR Reddy College of Engineering | Hostel & Mess</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts (Warm & Professional theme) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- ================= MAIN STYLES ================= -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================================================
+     HEADER (PERSISTENT)
+================================================== -->
+<header class="main-header animate-slide-down">
+
+    <div class="header-left">
+
+        <!-- BRAND / LOGO -->
+        <div
+            class="brand clickable"
+            onclick="showSection('home')"
+            role="button"
+            aria-label="Go to Home"
+        >
+            <h1>CR Reddy College of Engineering</h1>
+            <p>Hostel & Mess Management Portal</p>
+</div>
+       <!-- SEARCH -->
+        <div id="globalSearch" class="search-box" aria-hidden="false">
+            <input
+                type="text"
+                class="search-input"
+                placeholder="Search events, notices..."
+                aria-label="Search"
+            >
+        </div>
+
+
+
+
+    </div>
+
+    <!-- HEADER ACTIONS -->
+<div class="header-right">
+
+    <button
+        id="loginBtn"
+        class="btn login-btn"
+        onclick="showSection('login')"
+    >
+        Login
+    </button>
+
+    <button
+        id="admissionsBtn"
+        class="btn nav-btn"
+    >
+        Admissions
+    </button>
+
+    <button
+        id="contactBtn"
+        class="btn nav-btn"
+    >
+        Contact Us
+    </button>
+
+</div>
+
+
+
+</header>
+<!-- ================= END HEADER ================= -->
+
+<main>
+
+<!-- ==================================================
+     HOME PAGE
+================================================== -->
+<section id="home" class="section active">
+
+    <div class="section-inner">
+
+        <!-- HERO -->
+        <div class="hero animate-fade-in">
+            <h2>Welcome to Hostel & Mess Portal</h2>
+            <p>
+                A centralized system to manage hostel facilities,
+                mess services, student activities, attendance,
+                events, and official notifications.
+            </p>
+        </div>
+
+        <!-- ================= UPCOMING EVENTS ================= -->
+        <h3 class="section-title">🎉 Upcoming Events</h3>
+
+        <div class="card-grid animate-stagger">
+
+            <div class="card event-card">
+                <h4>🎆 New Year Celebration</h4>
+                <p>Cultural programs, DJ night & special dinner</p>
+                <span>31 December</span>
+            </div>
+
+            <div class="card event-card">
+                <h4>🏆 Hostel Day</h4>
+                <p>Sports events & prize distribution</p>
+                <span>15 January</span>
+            </div>
+
+            <div class="card event-card">
+                <h4>🍽️ Mess Special Day</h4>
+                <p>Special buffet for all hostellers</p>
+                <span>Monthly</span>
+            </div>
+
+        </div>
+
+        <!-- ================= HOSTEL BLOCKS ================= -->
+        <h3 class="section-title">🏢 Hostel Blocks</h3>
+
+        <div class="card-grid animate-stagger">
+
+            <div class="card hostel-card">
+                <img
+                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+                    alt="Block A Hostel"
+                >
+                <h4>Block A – Boys Hostel</h4>
+                <p>First year students with 24×7 security</p>
+            </div>
+
+            <div class="card hostel-card">
+                <img
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn8s10pwbtbZy96BfF9hDFsahH7UTh2G_EyQ&s"
+  alt="Block B Hostel"
+>
+
+                <h4>Block B – Boys Hostel</h4>
+                <p>Second & third year accommodation</p>
+            </div>
+
+            <div class="card hostel-card">
+                <img
+                    src="https://www.rgpv.ac.in/images/Boys-Hostel/boys-hostel3.jpg"
+                    alt="Block C Hostel"
+                >
+                <h4>Block C – Girls Hostel</h4>
+                <p>Modern rooms & study halls</p>
+            </div>
+
+            <div class="card hostel-card">
+                <img
+                    src="https://images.jdmagicbox.com/v2/comp/pune/m1/020pxx20.xx20.220319033956.v5m1/catalogue/dr-b-r-ambedkar-govt-boys-hostel-yerwada-pune-baner-road-pune-hostels-F7VVTZtx5F.jpg"
+                    alt="Block D Hostel"
+                >
+                <h4>Block D – PG Hostel</h4>
+                <p>Final year & PG students</p>
+            </div>
+
+        </div>
+<!-- ================= HOSTEL FACILITIES ================= -->
+<h3 class="section-title">🏫 Hostel Facilities</h3>
+
+<div class="card-grid">
+
+  <div class="card hostel-card">
+    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc" alt="Basketball Court">
+    <h4>Basketball Court</h4>
+    <p>Outdoor basketball facility for students</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFkbWludG9ufGVufDB8fDB8fHww" alt="Badminton Court">
+
+    <h4>Badminton Court</h4>
+    <p>Indoor badminton court</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" alt="Volleyball Court">
+
+    <h4>Volleyball Court</h4>
+    <p>Standard volleyball ground</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://cdn.britannica.com/89/162589-050-4729FD26/Girls-kabaddi-India.jpg" alt="Kabaddi Ground">
+
+    <h4>Kabaddi Ground</h4>
+    <p>Traditional kabaddi practice area</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_50/lsci/db/PICTURES/CMS/147400/147456.jpg" alt="Cricket Ground">
+
+    <h4>Cricket Ground</h4>
+    <p>Cricket practice and recreational ground for students</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://img2.exportersindia.com/product_images/bc-small/2023/10/12676606/mineral-water-plants-1698141661-7143101.jpeg" alt="Water Treatment Plant">
+
+    <h4>Water Plant</h4>
+    <p>RO & water purification system</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://anurajpg.in/wp-content/uploads/2025/09/what-is-mess-in-hostel-1700289637.jpg" alt="Dining Hall">
+
+    <h4>Dining Hall</h4>
+    <p>Spacious and hygienic dining area</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://www.kotharihostel.du.ac.in/img/Mess.jpg" alt="Mess Hall">
+
+    <h4>Mess Hall</h4>
+    <p>Daily meals for hostellers</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/b3/8d/50/free-access-to-professional.jpg" alt="Gym Facility">
+
+    <h4>Gym</h4>
+    <p>Fitness and workout facility</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://5.imimg.com/data5/SELLER/Default/2022/4/BU/PS/BF/69625216/college-security-service.jpg" alt="Security Guards">
+
+    <h4>Security</h4>
+    <p>24×7 security guards</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://cf-img-a-in.tosshub.com/lingo/itne/images/story/202401/65a1fc6270f7b-delhi-university-135828265-16x9.png?size=948:533" alt="CCTV Surveillance">
+
+    <h4>CCTV Surveillance</h4>
+    <p>Campus-wide CCTV monitoring</p>
+  </div>
+
+  <div class="card hostel-card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/MVGR_Cricket_Ground_and_benches.jpg/2560px-MVGR_Cricket_Ground_and_benches.jpg" alt="Outdoor Seating Area">
+
+    <h4>Outdoor Seating</h4>
+    <p>Open seating & walking areas</p>
+  </div>
+
+</div>
+
+    </div>
+</section>
+<!-- ================= END HOME ================= -->
+
+<!-- ==================================================
+     LOGIN
+================================================== -->
+<section id="login" class="section">
+
+    <div class="login-wrapper animate-scale-in">
+        <div class="login-card">
+
+            <h2>Portal Login</h2>
+
+            <!-- ROLE -->
+            <select id="roleSelect" aria-label="Select Role">
+                <option value="">Select Role</option>
+                <option>Student</option>
+                <option>Mess</option>
+                <option>Admin</option>
+            </select>
+
+            <!-- USER ID -->
+            <input
+                type="text"
+                placeholder="Roll No / Admin ID"
+                aria-label="User ID"
+            >
+
+            <!-- PASSWORD -->
+            <div class="password-group">
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Password"
+                    aria-label="Password"
+                >
+                <span
+                    class="toggle-password"
+                    onclick="togglePassword()"
+                    role="button"
+                >
+                    Show
+                </span>
+            </div>
+
+            <!-- LOGIN OPTIONS -->
+            <div class="login-options">
+                <span class="link" onclick="showSection('forgot')">
+                    Forgot password?
+                </span>
+                <span class="link" onclick="showSection('register')">
+                    Register
+                </span>
+            </div>
+
+            <button
+                class="btn primary-btn"
+                onclick="login()"
+            >
+                Login
+            </button>
+
+            <span
+                class="back-link"
+                onclick="showSection('home')"
+            >
+                ← Back to Home
+            </span>
+
+        </div>
+    </div>
+
+</section>
+<!-- ================= END LOGIN ================= -->
+
+<!-- ==================================================
+     REGISTER
+================================================== -->
+<section id="register" class="section">
+
+    <div class="login-wrapper animate-scale-in">
+        <div class="login-card">
+
+            <h2>Register / Set Password</h2>
+
+            <select aria-label="Role">
+                <option>Student</option>
+                <option>Mess</option>
+                <option>Admin</option>
+            </select>
+
+            <input type="text" placeholder="Roll No / Admin ID">
+            <input type="text" placeholder="Mobile Number">
+            <input type="text" placeholder="OTP">
+            <input type="password" placeholder="New Password">
+
+            <button
+                class="btn primary-btn"
+                onclick="showSection('login')"
+            >
+                Save & Login
+            </button>
+
+            <span
+                class="back-link"
+                onclick="showSection('login')"
+            >
+                ← Back to Login
+            </span>
+
+        </div>
+    </div>
+
+</section>
+<!-- ================= END REGISTER ================= -->
+
+<!-- ==================================================
+     FORGOT PASSWORD
+================================================== -->
+<section id="forgot" class="section">
+
+    <div class="login-wrapper animate-scale-in">
+        <div class="login-card">
+
+            <h2>Reset Password</h2>
+
+            <input type="text" placeholder="Roll No / Admin ID">
+            <input type="text" placeholder="Mobile Number">
+            <button class="btn small-btn" onclick="sendOTP()">
+  Send OTP
+</button>
+            <input type="text" placeholder="OTP">
+            <input type="password" placeholder="New Password">
+
+            <button
+                class="btn primary-btn"
+                onclick="showSection('login')"
+            >
+                Reset Password
+            </button>
+
+            <span
+                class="back-link"
+                onclick="showSection('login')"
+            >
+                ← Back to Login
+            </span>
+
+        </div>
+    </div>
+
+</section>
+<!-- ================= END FORGOT ================= -->
+
+<!-- ==================================================
+     DASHBOARD (ROLE BASED – INJECTED BY JS)
+================================================== -->
+<section id="dashboard" class="section">
+
+    <div class="dashboard-header animate-fade-in">
+        <h2 id="dashboardTitle">Dashboard</h2>
+
+        <button
+            class="btn logout-btn"
+            onclick="openLogout()"
+        >
+            Logout
+        </button>
+    </div>
+
+    <!-- Dynamic Cards -->
+    <div
+        id="dashboardCards"
+        class="card-grid animate-stagger"
+        aria-live="polite"
+    >
+        <!-- Injected by JS -->
+    </div>
+
+</section>
+<!-- ================= END DASHBOARD ================= -->
+
+</main>
+
+<!-- ==================================================
+     LOGOUT MODAL
+================================================== -->
+<div
+    id="logoutModal"
+    class="modal hidden"
+    role="dialog"
+    aria-modal="true"
+>
+
+    <div class="modal-box animate-scale-in">
+
+        <h3 id="modalTitle">Confirm Logout</h3>
+
+        <p id="modalText">
+            Are you sure you want to logout?
+        </p>
+
+        <div class="modal-actions">
+
+            <button
+                class="btn logout-btn"
+                id="modalConfirm"
+            >
+                Yes
+            </button>
+
+            <button class="btn" onclick="closeModal()">Cancel</button>
+
+                
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- INFO / DETAILS MODAL -->
+<div
+    id="infoModal"
+    class="modal hidden"
+    role="dialog"
+    aria-modal="true"
+>
+    <div class="modal-box animate-scale-in">
+        <h3 id="infoModalTitle">Details</h3>
+        <div id="infoModalContent" style="margin-top:8px;text-align:left"></div>
+        <div class="modal-actions">
+            <button class="btn" onclick="closeInfoModal()">Close</button>
+            <span></span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= END MODAL ================= -->
+
+<script src="app.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+
+  <!-- Top Footer -->
+  <div class="footer-top">
+
+    <!-- Left: College Info -->
+    <div class="footer-brand">
+      <h4>CR Reddy College of Engineering</h4>
+      <p>Hostel & Mess Management Portal</p>
+    </div>
+
+    <!-- Center: Institutional Links -->
+    <div class="footer-links">
+      <span>Maps & Directions</span>
+      <span>Emergency Info</span>
+      <span>Privacy Policy</span>
+      <span>Terms of Use</span>
+      <span>Non-Discrimination</span>
+      <span>Accessibility</span>
+    </div>
+
+    <!-- Right: Support -->
+    <div class="footer-support">
+      <span class="support"></span>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <span>© 2025 CR Reddy College of Engineering. All rights reserved.</span>
+    <span class="footer-credit">
+      Crafted with dedication by Website Team
+    </span>
+  </div>
+
+</footer>
+
+</body>
+</html>
